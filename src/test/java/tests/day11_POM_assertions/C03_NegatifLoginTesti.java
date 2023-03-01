@@ -25,6 +25,33 @@ public class C03_NegatifLoginTesti {
         qdPage.loginButonu.click();
 
         Assert.assertTrue(qdPage.emailKutusu.isEnabled());
+        Driver.closeDriver();
+    }
+
+    @Test
+    public void  negatifLogin2(){
+
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+        qdPage.ilkLogin.click();
+        qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+        qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
+        qdPage.loginButonu.click();
+
+        Assert.assertTrue(qdPage.emailKutusu.isEnabled());
+        Driver.closeDriver();
+    }
+
+    @Test
+    public void  negatifLogin3(){
+
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+        qdPage.ilkLogin.click();
+        qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+        qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
+        qdPage.loginButonu.click();
+
+        Assert.assertTrue(qdPage.emailKutusu.isEnabled());
+        Driver.closeDriver();
     }
 
 }
