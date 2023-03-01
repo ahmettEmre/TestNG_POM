@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class QdPage {
 
-    QdPage(){
+    public QdPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
