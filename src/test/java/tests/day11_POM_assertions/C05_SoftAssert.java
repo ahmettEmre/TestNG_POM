@@ -1,5 +1,6 @@
 package tests.day11_POM_assertions;
 
+import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.AmazonPage;
@@ -20,10 +21,19 @@ public class C05_SoftAssert {
 
 
         //nutella icin arama yapip, sonuclarinin nutella icerdigini dogrulayin
+        amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
+
+        expectedIcerik ="Nutella";
+        String actualAramaSonucYazisi= amazonPage.aramaSonucElementi.getText();
+        softAssert.assertTrue(actualAramaSonucYazisi.contains(expectedIcerik),"arama sonucu Nutella icermiyor");
 
 
+        // ilk urune tiklayip, urun isminde Nutella gectigini dogrulayin
+        amazonPage.ilkUrun.click();
+        expectedIcerik ="Nutella";
+        String actualIlkUrunIsim= amazonPage.ilkUrunIsimElementi.getText();
 
-        //ilk urune tiklayip, urun isminde Nutella gectigini dogrulayin
+        softAssert.assertTrue(actualIlkUrunIsim.contains(expectedIcerik),"ilk urun ismi Nutella icermiyor");
 
 
         softAssert.assertAll();
