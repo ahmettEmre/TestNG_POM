@@ -27,6 +27,9 @@ public class C02_PozitifLoginTesti {
         //basarili sekilde giris yapildigini test edin
 
 
+        Driver.closeDriver();
+
+
 
 
 
