@@ -13,10 +13,10 @@ public class C03_NegatifLoginTesti {
     //1- gecerli username i gecersiz password
     //2- gecersiz username, gecerli passsword
     //3- gecersiz username, gecersiz password
-    QdPage qdPage=new QdPage();
+    QdPage qdPage= new QdPage();
 
     @Test
-    public void  negatifLogin1(){
+    public void negatifLogin1(){
 
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qdPage.ilkLogin.click();
@@ -28,9 +28,10 @@ public class C03_NegatifLoginTesti {
         Driver.closeDriver();
     }
 
-    @Test
-    public void  negatifLogin2(){
 
+    @Test
+    public void negatifLogin2(){
+        qdPage= new QdPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qdPage.ilkLogin.click();
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
@@ -42,8 +43,8 @@ public class C03_NegatifLoginTesti {
     }
 
     @Test
-    public void  negatifLogin3(){
-
+    public void negatifLogin3(){
+        qdPage= new QdPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qdPage.ilkLogin.click();
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
