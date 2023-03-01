@@ -1,0 +1,29 @@
+
+
+Amazon ilk cookies = By.xpath("(//span[@class='a-button-inner'])[1]")
+Amazon AramaKutusu = By.id("twotabsearchtextbox")
+Amazon aramaSonucElementi =By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
+Amazon aramaSonucElementiS@  By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']")
+Amazon dropDowndMenü =  By.xpath("//select[@id='searchDropdownBox']")
+Amazon ilk urun - @FindBy(xpath = "(//img[@class='s-image'])[1]")/n public WebElement ilkUrun;
+Amazon ilk urun ismi - @FindBy(xpath = "//span[@id='productTitle']") /n public WebElement ilkUrunIsimElementi;
+
+
+Facebook ilk cookies = By.xpath("(//button[@value='1'])[3]")
+Facebook Create new account = By.xpath("(//a[@role='button'])[2]")
+Facebook Female radio = By.xpath("(//input[@type='radio'])[1]"));
+Facebook Male radio = By.xpath("(//input[@type='radio'])[2]"));
+Facebook Custome radio = By.xpath("(//input[@type='radio'])[3]"));
+
+
+herokuapp ddm = By.xpath("//select[@id='dropdown']")
+Bir yerdeki texti silme - textKutusu.sendKeys(Keys.chord(Keys.CONTROL, "a"));  // metni seçmek için - textKutusu.sendKeys(Keys.DELETE);
+
+
+
+
+    === Web Siteleri ===
+
+https://the-internet.herokuapp.com/dropdown
+
+Automationexercise.com - Reklam silme - if(driver.getCurrentUrl().equals("https://automationexercise.com/#google_vignette")){driver.navigate().refresh();
