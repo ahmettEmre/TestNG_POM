@@ -1,18 +1,16 @@
 package tests.day11_POM_assertions;
 
-import org.checkerframework.checker.units.qual.C;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QdPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
+import utilities.ReausableMethods;
 
 public class C02_PozitifLoginTesti {
 
     @Test
     public void pozitifLoginTesti(){
-        ReusableMethods.bekle(3);
+        ReausableMethods.bekle(3);
 
         //qd anasayfaya gidin
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));

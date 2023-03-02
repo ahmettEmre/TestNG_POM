@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 import pages.ZeroPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
+import utilities.ReausableMethods;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class C06_SoftAssert {
         zeroPage.purchaseFCButonu.click();
         // 8. “Currency” drop down menusunden Eurozone’u secin
         Select select= new Select(zeroPage.currencyDropdown);
-        ReusableMethods.bekle(2);
+        ReausableMethods.bekle(2);
         select.selectByVisibleText("Eurozone (euro)");
         // 9. soft assert kullanarak "Eurozone (euro)" secildigini test edin
 
@@ -49,7 +49,7 @@ public class C06_SoftAssert {
         // 10. soft assert kullanarak DropDown listesinin su secenekleri oldugunu test edin "Select One", "Australia (dollar)", "Canada (dollar)","Switzerland (franc)","China (yuan)","Denmark (krone)","Eurozone (euro)","Great Britain (pound)","Hong Kong (dollar)","Japan (yen)","Mexico (peso)","Norway (krone)","New Zealand (dollar)","Sweden (krona)","Singapore (dollar)","Thailand (baht)"
 
         List<WebElement> optionsElementListesi= select.getOptions();
-        List<String> actualOptionsStringList= ReusableMethods.stringListeCevir(optionsElementListesi);
+        List<String> actualOptionsStringList= ReausableMethods.stringListeCevir(optionsElementListesi);
 
         String[] expectedArr={"Select One", "Australia (dollar)", "Canada (dollar)","Switzerland (franc)","China (yuan)","Denmark (krone)","Eurozone (euro)","Great Britain (pound)","Hong Kong (dollar)","Japan (yen)","Mexico (peso)","Norway (krone)","New Zealand (dollar)","Sweden (krona)","Singapore (dollar)","Thailand (baht)"};
         List<String> expectedOptionListesi = new ArrayList<>();
