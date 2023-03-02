@@ -33,7 +33,7 @@ public class Driver {
         if (driver==null) {
 
             switch (istenenBrowser){
-                case "firafox":
+                case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver=new FirefoxDriver();
                     break;
