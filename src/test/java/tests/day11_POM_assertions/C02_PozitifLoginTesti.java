@@ -6,11 +6,13 @@ import org.testng.annotations.Test;
 import pages.QdPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C02_PozitifLoginTesti {
 
     @Test
     public void pozitifLoginTesti(){
+        ReusableMethods.bekle(3);
 
         //qd anasayfaya gidin
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
