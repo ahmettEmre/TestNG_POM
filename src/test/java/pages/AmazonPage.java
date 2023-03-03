@@ -34,3 +34,6 @@ public class AmazonPage {
     @FindBy(xpath = "//span[@id='productTitle']")
     public WebElement ilkUrunIsimElementi;
 }
+
+
+
