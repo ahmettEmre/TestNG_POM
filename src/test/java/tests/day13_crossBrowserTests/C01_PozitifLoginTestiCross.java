@@ -28,7 +28,7 @@ public class C01_PozitifLoginTestiCross extends TestBaseCross {
         WebElement loginButonu= driver.findElement(By.xpath("//button[text()='Login']"));
         loginButonu.click();
 
-        WebElement basariliGirisElementi= driver.findElement(By.xpath("//a[text()=]"));
+        WebElement basariliGirisElementi= driver.findElement(By.xpath("//a[text()='Instructor']"));
         Assert.assertTrue(basariliGirisElementi.isDisplayed());
 
         Driver.closeDriver();
